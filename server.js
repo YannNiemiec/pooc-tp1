@@ -20,11 +20,11 @@ app.use(express.static('public'))
 })
 
   app.get('/hello/:name', (request, response) => {
-    response.render('hello, {name: request.params.name});
+    response.render('hello', {name: request.params.name});
 })
 
 app.get('/pooc', (request, response) => {
-response.render('index');
+response.render('pooc');
 })
 
   app.listen(port, (err) => {
